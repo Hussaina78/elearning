@@ -27,3 +27,12 @@ class Logininstructor(FlaskForm):
     rememberme = BooleanField('Keep me logged in? ')
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Sign Up')
+
+class Registerinstructor(FlaskForm):
+   
+    email = StringField('Email', render_kw={'placeholder':'Email'}, validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    username = StringField('username', render_kw={'placeholder':'Enter username'}, validators=[DataRequired()])
+    rememberme = BooleanField('Keep me logged in? ')
+    
+    submit = SubmitField('Sign Up')
